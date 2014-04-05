@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Sample App</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+
+  <div ng-app="sampleApp">
+
+    <div ng-controller="sampleController">
+
+      <input type="text" ng-model="query">
+
+      {{query}}
+
+      <ul>
+        <li ng-repeat="item in items | filter:query"> {{item.brand}} </li>
+      </ul>
+
+    </div>
+
+    <div ng-controller="anotherController">
+
+    </div>
+
+  </div>
+
+</body>
+</html>
